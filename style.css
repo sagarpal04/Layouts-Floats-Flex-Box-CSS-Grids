@@ -2,7 +2,6 @@
   /* border-top: 10px solid #1098ad; */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* PAGE SECTIONS */
@@ -52,7 +51,6 @@ aside {
   /* padding-top: 50px;
   padding-bottom: 50px; */
   padding: 50px 0;
-  width: 500px;
 }
 
 /* SMALLER ELEMENTS */
@@ -118,6 +116,7 @@ li:last-child {
 #author {
   font-style: italic;
   font-size: 18px;
+  margin: 0;
 }
 
 #copyright {
@@ -141,9 +140,9 @@ body {
   /* background-color: orangered; */
 }
 
-.first-li {
+/* .first-li {
   font-weight: bold;
-}
+} */
 
 li:first-child {
   font-weight: bold;
@@ -153,9 +152,9 @@ li:last-child {
   font-style: italic;
 }
 
-/* li:nth-child(even) {
-  color: red;
-} */
+li:nth-child(even) {
+  /* color: red; */
+}
 
 /* Misconception: this won't work! */
 article p:first-child {
@@ -194,7 +193,6 @@ nav a:link {
   /* background-color: orangered;
   margin: 20px;
   padding: 20px;
-
   display: block; */
 
   margin-right: 30px;
@@ -249,15 +247,12 @@ h2::before {
 /* #copyright {
   color: red;
 }
-
 .copyright {
   color: blue;
 }
-
 .text {
   color: yellow;
 }
-
 footer p {
   color: green !important;
 } */
@@ -266,39 +261,41 @@ footer p {
 nav p {
   font-size: 18px;
 } */
-
-/* Floats */
-.author-img {
-  float: left;
-  margin-bottom: 20px;
-}
-.author {
-  float: left;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-h1 {
-  float: left;
-}
-nav {
-  float: right;
-}
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-article {
-  width: 825px;
-  float: left;
-}
-aside {
-  width: 300px;
-  float: right;
-}
-footer {
-  clear: both;
-}
 h4 {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 825px 300px;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 36px;
+}
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.related {
+  margin: 0;
+  padding: 18px;
+}
+.related li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.related a:link {
+  font-weight: bold;
+  font-size: 16px;
+}
+.related p {
+  font-style: italic;
+  font-size: 14px;
 }
